@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/site.webmanifest">
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="msapplication-config" content="img/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Geotrack</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <img src="img/logo.svg" alt="logo" class="logo-img">
+                <h1 class="logo-title">Geotrack</h1>
+                <p class="logo-ver">ver 1.0</p>
+            </div>
+            <nav class="hnav-wrap">
+                <ul class="hnav">
+                    <li class="hnav-item hnav-item--active">
+                        <a class="hnav-item-link" href="">Geomap</a>
+                    </li>
+                    <li class="hnav-item">
+                        <a class="hnav-item-link" href="">Home</a>
+                    </li>
+                    <li class="hnav-item">
+                        <a class="hnav-item-link" href="">About</a>
+                    </li>
+                    <li class="hnav-item">
+                        <a class="hnav-item-link" href="">Features</a>
+                    </li>
+                    <li class="hnav-item">
+                        <a class="hnav-item-link" href="">Pricing</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="search" placeholder="Search geotrack" class="search-input">
+            </div>
+            <div class="userpic">
+                <img class="userpic-img" src="img/avatar.jpg" alt="user picture">
+            </div>
+            <nav class="mobile-nav" id="mobileNav">
+                <button class="mobile-nav-button" id="menuButton" onclick="toggleMenu()"></button>
+                <nav class="mobile-nav-wrap">
+                    <ul class="mobile-hnav">
+                        <li class="mobile-hnav-item mobile-hnav-item--active">
+                            <a class="mobile-hnav-item-link" href="">Geomap</a>
+                        </li>
+                        <li class="mobile-hnav-item">
+                            <a class="mobile-hnav-item-link" href="">Home</a>
+                        </li>
+                        <li class="mobile-hnav-item">
+                            <a class="mobile-hnav-item-link" href="">About</a>
+                        </li>
+                        <li class="mobile-hnav-item">
+                            <a class="mobile-hnav-item-link" href="">Features</a>
+                        </li>
+                        <li class="mobile-hnav-item">
+                            <a class="mobile-hnav-item-link" href="">Pricing</a>
+                        </li>
+                    </ul>
+                <div class="mobile-search">
+                    <input type="search" placeholder="Search geotrack" class="mobile-search-input">
+                </div>
+                </nav>
+            </nav>
+        </header>
+        <main class="main">
+            <aside class="place">
+                <div class="place-header">
+                    <div class="place-icons">
+                        <img src="img/place-logo.png" alt="" class="place-logo">
+                        <div class="place-qr">
+                            <img src="img/qr.png" alt="" class="place-qr-img">
+                        </div>
+                        <a href="" class="place-more"></a>
+                    </div>
+                    <h2 class="place-title">California university</h2>
+                    <p class="place-id">ID:1238923748903478914751089</p>
+                    <button class="place-copy">Copy in buffer</button>
+                </div>
+                <ul class="place-details">
+                    <li class="place-details-row">
+                        <p class="place-parameter">Geo Type:</p>
+                        <p class="place-value">Government</p>
+                    </li>
+                    <li class="place-details-row">
+                        <p class="place-parameter">Short Geo:</p>
+                        <p class="place-value">CA_University</p>
+                    </li>
+                    <li class="place-details-row">
+                        <p class="place-parameter">Adress:</p>
+                        <p class="place-value">United States, California LA, Sarigza Avenue 234, 44A</p>
+                    </li>
+                    <li class="place-details-row">
+                        <p class="place-parameter">Email:</p>
+                        <a  class="place-value link" href="mailto:ca@university@gmail.com">ca@university@gmail.com</a>
+                    </li>
+                    <li class="place-details-row">
+                        <p class="place-parameter">Expire:</p>
+                        <p class="place-value">31 Oct, 2016</p>
+                    </li>
+                    <li class="place-details-row">
+                        <p class="place-parameter">Privacy:</p>
+                        <p class="place-value">Enable</p>
+                    </li>
+                </ul>
+                <div class="place-footer">
+                    <a href="" class="red-button place-edit">Edit profile</a>
+                </div>
+            </aside>
+            <section class="map-wrap">
+                <div class="msg">
+                    <h3 class="msg-title">Geo message</h3>
+                    <p class="msg-content">The results of yesterday's election came as a surprise for most of us, regarldess of our political views. It will take time for us to process and understand the meaning of the vote.</p>
+                </div>
+                <div class="map">
+                    <div id="map"></div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-logo">
+                <p class="footer-name">Geotrack</p>
+                <p class="footer-copyright">&copy; Geotrack Inc. All rights reserved 2016</p>
+            </div>
+            <div class="fnavs">
+                <nav class="fnav-wrap">
+                    <ul class="fnav">
+                        <li class="fnav-item">
+                            <a class="fnav-item-link" href="">App API</a>
+                        </li>
+                        <li class="fnav-item">
+                            <a class="fnav-item-link" href="">Support</a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="socials-wrap">
+                    <ul class="socials">
+                        <li class="socials-item">
+                            <a href="" class="socials-item-link">
+                                <img class="socials-icon" src="img/fb.svg" alt="facebook">
+                            </a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="" class="socials-item-link">
+                                <img class="socials-icon" src="img/twitter.svg" alt="twitter">
+                            </a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="" class="socials-item-link">
+                                <img class="socials-icon" src="img/instagram.svg" alt="instagram">
+                            </a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="" class="socials-item-link">
+                                <img class="socials-icon" src="img/vimeo.svg" alt="vimeo">
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJ1UqOItuLIAOkwOhb7UQlHMpIcq4Ilcg&callback=initMap">
+    </script>
+</body>
+</html>
